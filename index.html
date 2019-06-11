@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=1000">
@@ -7,16 +8,21 @@
 	<title>Pandaa's personal page</title>
 	<meta name="Keywords" content="portfolio">
 	<meta name="description" content="Pandaa's personal page">
+
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Sofia|Ubuntu|Noto+Sans+TC|Noto+Serif+TC&display=swap"
+		rel="stylesheet">
 	<link href="./common/css/base_190606_1315.css" rel="stylesheet" media="all">
+
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="common/js/jquery.scrolling-parallax.js"></script>
-    <script src="common/js/main.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Cinzel|Sofia|Ubuntu|Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet">
-	[if lt IE 9]>
-	<script src="common/js/html5shiv.js"></script>
-	<![endif]
+	<script type="text/javascript" src="common/js/vendor/parallax.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="common/js/html5shiv.js"></script>
+	<![endif]-->
+
+	<script src="common/js/main.js"></script>
 </head>
-	
+
 <body>
 	<div class="bar bar-top"></div>
 	<div class="bar bar-right"></div>
@@ -29,7 +35,7 @@
 				<nav id="gnav">
 					<div class="gnav-1">
 						<ul class="inner">
-							<li class="gnav_home" style="width: 36px"> 
+							<li class="gnav_home" style="width: 36px">
 								<a href="#side-header">home</a>
 							</li>
 							<li class="gnav_about-me" style="width: 62px">
@@ -80,212 +86,264 @@
 				</nav>
 			</div>
 			<div class="title">
-				<h1 class="site-title">Hello!</h1>
+				<!-- <h1 class="site-title">Hello!</h1> -->
+				<h1 class="ml6 site-title">
+					<span class="text-wrapper">
+						<span class="letters">Hello!</span>
+					</span>
+				</h1>
 				<p class="sub-title">Check out some of my works</p>
 			</div>
 		</div>
 	</header>
-	
-	<section id="about-me">
-		<h2 class="heading">About Me</h2>
-		    <div class="content_wrapper">
-		        <img class="portrait" src="common/img/00580009_s.jpg" alt="profile-picture">
-		        <div>
-		            <h3 class="about-me_subtitle">設計可以讓生活變得更美好</h3>
-		            <p class="about-me_content">為什麼想從平面設計轉職到網頁前端設計？<br>
-		                在經歷了四年的平面設計工作的過程中，深深感受到設計師的無力感，<br>
-		                設計師在設計案中很難擁有主導作品的主控權，但是透過平面設計結合網頁前端的能力，<br>
-		                這樣可以發揮更大的影響力，貫徹「設計讓生活變得更美好」這個理念，<br>
-		                這是我想轉職到網頁前端設計的最大的原因。<br><br>
-		                網頁前端設計是一個需要不斷學習的領域，有讓人想要不斷探索的魅力，<br>
-		                希望我可以透過寫程式的技能更加擴展自己的能力。
-		            </p>
-		        </div>
-		    </div>
-	</section>
-	
-	<section id="booklet" class="booklet section_box" >
-       <h2 class="heading">Booklet</h2>
-        <div class="booklet-warpper section_container">
-          <div class="section_warpper"><img class="section_image" src="common/img/1-booklet/booklet_p1.png" alt="booklet-p1"></div>
-           <div class="section_warpper"><img class="section_image" src="common/img/1-booklet/booklet_p2.png" alt="booklet-p2"></div>
-           <div class="section_warpper"><img class="section_image" src="common/img/1-booklet/booklet_p3.png" alt="booklet-p3"></div>
-           <div class="section_warpper"><img class="section_image" src="common/img/1-booklet/booklet_p4.png" alt="booklet-p4"></div>
-        </div>
-        <h3>Rural Travel in Taiwan</h3>
-        <p class="section_content">-Nantou Branch, the Soil and Water Conservation Bureau.<br> Council of Agriculture, Executive Yuan.-</p>
-	</section>
-	
+
+	<main class="wrapper">
+		<section id="about-me" class="section parallax">
+			<h2 class="heading">About Me</h2>
+			<div class="content_wrapper">
+				<img class="portrait" src="common/img/00580009_s.jpg" alt="profile-picture">
+				<div>
+					<h3 class="about-me_subtitle">設計可以讓生活變得更美好</h3>
+					<p class="about-me_content">為什麼想從平面設計轉職到網頁前端設計？<br>
+						在經歷了四年的平面設計工作的過程中，深深感受到設計師的無力感，<br>
+						設計師在設計案中很難擁有主導作品的主控權，但是透過平面設計結合網頁前端的能力，<br>
+						這樣可以發揮更大的影響力，貫徹「設計讓生活變得更美好」這個理念，<br>
+						這是我想轉職到網頁前端設計的最大的原因。<br><br>
+						網頁前端設計是一個需要不斷學習的領域，有讓人想要不斷探索的魅力，<br>
+						希望我可以透過寫程式的技能更加擴展自己的能力。
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section static">
+			<h1>Boring</h1>
+		</section>
+
+		<section id="booklet" class="section parallax booklet section_box">
+			<h2 class="heading">Booklet</h2>
+			<div class="booklet-warpper section_container">
+				<div class="section_warpper"><img class="section_image" src="common/img/1-booklet/booklet_p1.png"
+						alt="booklet-p1"></div>
+				<div class="section_warpper"><img class="section_image" src="common/img/1-booklet/booklet_p2.png"
+						alt="booklet-p2"></div>
+				<div class="section_warpper"><img class="section_image" src="common/img/1-booklet/booklet_p3.png"
+						alt="booklet-p3"></div>
+				<div class="section_warpper"><img class="section_image" src="common/img/1-booklet/booklet_p4.png"
+						alt="booklet-p4"></div>
+			</div>
+			<h3>Rural Travel in Taiwan</h3>
+			<p class="section_content">-Nantou Branch, the Soil and Water Conservation Bureau.<br> Council of
+				Agriculture, Executive Yuan.-</p>
+		</section>
+	</main>
+
+	<!-- <div class="parallax-container" data-parallax="scroll" data-speed="0.2" data-image-src="./common/img/header-bg-1483x834.png" style="height: 390px;">
+		<p>Test </p>
+	</div> -->
+
 	<section id="borchure" class="borchure section_box">
-	    <h2 class="heading">Borchure</h2>
-       <h3 class="borchure-content">Kouhu Travel Guide</h3>
-       <p>-Yunlin County Government-</p>
-        <div class="borchure-warpper section_container">
-            <div class="section_warpper"><img class="section_image" src="./common/img/2-brochure/brochure_P1.png" alt="brochure-P1"></div>
-            <div class="section_warpper"><img class="section_image" src="./common/img/2-brochure/brochure_P2.png" alt="brochure-P2"></div>
-            <div class="section_warpper"><img class="section_image" src="./common/img/2-brochure/brochure_P3.png" alt="brochure-P3"></div>
-        </div>
+		<h2 class="heading">Borchure</h2>
+		<h3 class="borchure-content">Kouhu Travel Guide</h3>
+		<p>-Yunlin County Government-</p>
+		<div class="borchure-warpper section_container">
+			<div class="section_warpper"><img class="section_image" src="./common/img/2-brochure/brochure_P1.png"
+					alt="brochure-P1"></div>
+			<div class="section_warpper"><img class="section_image" src="./common/img/2-brochure/brochure_P2.png"
+					alt="brochure-P2"></div>
+			<div class="section_warpper"><img class="section_image" src="./common/img/2-brochure/brochure_P3.png"
+					alt="brochure-P3"></div>
+		</div>
 	</section>
-	
+
 	<section id="calendar" class="calendar section_box">
-	    <h2 class="heading">Calendar</h2>
-        <div class="section_container calendar_container">
-            <div class="section_warpper"><img class="section_image" src="./common/img/3-calendar/calendar-01.png" alt="calendar_P1"></div>
-            <div class="section_warpper"><img class="section_image"  src="./common/img/3-calendar/calendar_display.png" alt="calendar_P2"></div>
-        </div>
-        <h3 class="calendar-content">Kouhu Fisherman's Calendar 2019
-        </h3>
-        <p class="section_content">-Yunlin County Government-</p>
+		<h2 class="heading">Calendar</h2>
+		<div class="section_container calendar_container">
+			<div class="section_warpper"><img class="section_image" src="./common/img/3-calendar/calendar-01.png"
+					alt="calendar_P1"></div>
+			<div class="section_warpper"><img class="section_image" src="./common/img/3-calendar/calendar_display.png"
+					alt="calendar_P2"></div>
+		</div>
+		<h3 class="calendar-content">Kouhu Fisherman's Calendar 2019
+		</h3>
+		<p class="section_content">-Yunlin County Government-</p>
 	</section>
-	
+
 	<section id="illustration" class="illustration section_box">
-	    <h2 class="heading">Illustration</h2>
-        <div class="section_container illustration_container">
-            <div class="section_warpper"><img class="section_image" src="./common/img/4-illustration/illustration-1.png" alt="illustration-1">
-            <h3>Kouhu Fisherman's Calendar 2019</h3>
-            <p class="section_content">-Yunlin County Government-</p></div>
-            <div class="section_warpper"><img class="section_image" src="./common/img/4-illustration/illustration-2.png" alt="illustration-2">
-            <h3>Rural Travel in Taiwan</h3>
-            <p class="section_content">-Nantou Branch, the Soil and Water Conservation Bureau.<br> Council of Agriculture, Executive Yuan.-</p></div>
-        </div>
+		<h2 class="heading">Illustration</h2>
+		<div class="section_container illustration_container">
+			<div class="section_warpper"><img class="section_image" src="./common/img/4-illustration/illustration-1.png"
+					alt="illustration-1">
+				<h3>Kouhu Fisherman's Calendar 2019</h3>
+				<p class="section_content">-Yunlin County Government-</p>
+			</div>
+			<div class="section_warpper"><img class="section_image" src="./common/img/4-illustration/illustration-2.png"
+					alt="illustration-2">
+				<h3>Rural Travel in Taiwan</h3>
+				<p class="section_content">-Nantou Branch, the Soil and Water Conservation Bureau.<br> Council of
+					Agriculture, Executive Yuan.-</p>
+			</div>
+		</div>
 	</section>
-	
+
 	<section id="photography" class="photography">
-	    <h2 class="heading">Photography</h2>
-	    
-        <div class="photography-warpper">
-	            <div class="photoSectionWarpper">
-	            <img src="./common/img/5-photography/9.jpg" alt="photography-9">
-	            <img src="./common/img/5-photography/1.jpg" alt="photography-1">
-	            </div>
-	            <div class="photoSectionWarpper">
-	            <img src="./common/img/5-photography/10.jpg" alt="photography-10">
-	            <img src="./common/img/5-photography/2.jpg" alt="photography-2">
-	            </div>
-	            <div class="photoSectionWarpper">
-	            <img src="./common/img/5-photography/11.jpg" alt="photography-11">
-	            <img src="./common/img/5-photography/3.jpg" alt="photography-3">
-	            </div>
-	            <div class="photoSectionWarpper">
-	            <img src="./common/img/5-photography/12.jpg" alt="photography-12">
-	            <img src="./common/img/5-photography/4.jpg" alt="photography-4">
-	            </div>
-	        
-	            <div class="photoSectionWarpper photographyclear">
-	            <img src="./common/img/5-photography/13.jpg" alt="photography-13">
-	            <img src="./common/img/5-photography/5.jpg" alt="photography-5">
-	            </div>
-	            <div class="photoSectionWarpper">
-	            <img src="./common/img/5-photography/14.jpg" alt="photography-14">
-	            <img src="./common/img/5-photography/6.jpg" alt="photography-6">
-	            </div>
-	            <div class="photoSectionWarpper">
-	            <img src="./common/img/5-photography/15.jpg" alt="photography-15">
-	            <img src="./common/img/5-photography/7.jpg" alt="photography-7">
-	            </div>
-	            <div class="photoSectionWarpper">
-	            <img src="./common/img/5-photography/16.jpg" alt="photography-16">
-	            <img src="./common/img/5-photography/8.jpg" alt="photography-8">
-	            </div>
-	        </div>
-	        
+		<h2 class="heading">Photography</h2>
+
+		<div class="photography-warpper">
+			<div class="photoSectionWarpper">
+				<img src="./common/img/5-photography/9.jpg" alt="photography-9">
+				<img src="./common/img/5-photography/1.jpg" alt="photography-1">
+			</div>
+			<div class="photoSectionWarpper">
+				<img src="./common/img/5-photography/10.jpg" alt="photography-10">
+				<img src="./common/img/5-photography/2.jpg" alt="photography-2">
+			</div>
+			<div class="photoSectionWarpper">
+				<img src="./common/img/5-photography/11.jpg" alt="photography-11">
+				<img src="./common/img/5-photography/3.jpg" alt="photography-3">
+			</div>
+			<div class="photoSectionWarpper">
+				<img src="./common/img/5-photography/12.jpg" alt="photography-12">
+				<img src="./common/img/5-photography/4.jpg" alt="photography-4">
+			</div>
+
+			<div class="photoSectionWarpper photographyclear">
+				<img src="./common/img/5-photography/13.jpg" alt="photography-13">
+				<img src="./common/img/5-photography/5.jpg" alt="photography-5">
+			</div>
+			<div class="photoSectionWarpper">
+				<img src="./common/img/5-photography/14.jpg" alt="photography-14">
+				<img src="./common/img/5-photography/6.jpg" alt="photography-6">
+			</div>
+			<div class="photoSectionWarpper">
+				<img src="./common/img/5-photography/15.jpg" alt="photography-15">
+				<img src="./common/img/5-photography/7.jpg" alt="photography-7">
+			</div>
+			<div class="photoSectionWarpper">
+				<img src="./common/img/5-photography/16.jpg" alt="photography-16">
+				<img src="./common/img/5-photography/8.jpg" alt="photography-8">
+			</div>
+		</div>
+
 	</section>
-	
+
 	<section id="menu" class="menu section_box">
-	    <h2 class="heading">Menu</h2>
-        <div class="section_container menu-warpper">
-            <div class="section_warpper"><img class="section_image menu_image" src="./common/img/6-menu/3.png" alt=""></div>
-            <div class="section_warpper"><img class="section_image menu_image" src="./common/img/6-menu/4.png" alt=""></div>
-            <div class="section_warpper"><img class="section_image menu_image" src="./common/img/6-menu/5.png" alt=""></div>
-        </div>
-        <div class="section_container menu_container">
-            <div class="section_warpper"><img class="section_image" src="./common/img/6-menu/1.png" alt=""></div>
-            <div class="section_warpper"><img class="section_image" src="./common/img/6-menu/2.png" alt=""></div>
-        </div>
-        <h3>Korean Restaurant Menu</h3>
-        <p class="section_content">-HARU HARU-</p>
+		<h2 class="heading">Menu</h2>
+		<div class="section_container menu-warpper">
+			<div class="section_warpper"><img class="section_image menu_image" src="./common/img/6-menu/3.png" alt="">
+			</div>
+			<div class="section_warpper"><img class="section_image menu_image" src="./common/img/6-menu/4.png" alt="">
+			</div>
+			<div class="section_warpper"><img class="section_image menu_image" src="./common/img/6-menu/5.png" alt="">
+			</div>
+		</div>
+		<div class="section_container menu_container">
+			<div class="section_warpper"><img class="section_image" src="./common/img/6-menu/1.png" alt=""></div>
+			<div class="section_warpper"><img class="section_image" src="./common/img/6-menu/2.png" alt=""></div>
+		</div>
+		<h3>Korean Restaurant Menu</h3>
+		<p class="section_content">-HARU HARU-</p>
 	</section>
-	
+
 	<section id="leaflet" class="leaflet section_box">
-	    <h2 class="heading">Leaflet</h2>
-        <div class="section_container leaflet_container">
-            <div class="section_warpper"><img class="section_image" src="./common/img/7-leaflet/leaflet-1.png" alt="leaflet-1">
-            <h3>Travel in Yunlin <span >(lunar new year ver)</span></h3>
-            <p class="section_content">-Yunlin County Government-</p></div>
-            <div class="section_warpper"><img class="section_image leaflet_image" src="./common/img/7-leaflet/leaflet-2.png" alt="leaflet-2">
-            <h3>Eel Festival</h3>
-            <p class="section_content">-Yunlin County Government-</p></div>
-        </div>
+		<h2 class="heading">Leaflet</h2>
+		<div class="section_container leaflet_container">
+			<div class="section_warpper"><img class="section_image" src="./common/img/7-leaflet/leaflet-1.png"
+					alt="leaflet-1">
+				<h3>Travel in Yunlin <span>(lunar new year ver)</span></h3>
+				<p class="section_content">-Yunlin County Government-</p>
+			</div>
+			<div class="section_warpper"><img class="section_image leaflet_image"
+					src="./common/img/7-leaflet/leaflet-2.png" alt="leaflet-2">
+				<h3>Eel Festival</h3>
+				<p class="section_content">-Yunlin County Government-</p>
+			</div>
+		</div>
 	</section>
-	
+
 	<section id="advertising" class="advertising section_box">
-	    <h2 class="heading">Advertising</h2>
-        <div class="section_container advertising_container">
-            <div class="section_warpper "><img class="section_image" src="./common/img/8-advertising/s/advertising-1.png" alt="advertising-1">
-            <h3 class="advContentMarginL">Duphalac</h3>
-            <p class="section_content advContentMarginL">-abbott-</p></div>
-            <div class="section_warpper advertising_wrapper"><img class="section_image advertising_image" src="./common/img/8-advertising/s/advertising-2.png" alt="advertising-2">
-            <h3 class="advContentMarginR">Walk for Children</h3>
-            <p class="section_content advContentMarginR">-Sowers Action-</p></div>
-        </div>
+		<h2 class="heading">Advertising</h2>
+		<div class="section_container advertising_container">
+			<div class="section_warpper "><img class="section_image"
+					src="./common/img/8-advertising/s/advertising-1.png" alt="advertising-1">
+				<h3 class="advContentMarginL">Duphalac</h3>
+				<p class="section_content advContentMarginL">-abbott-</p>
+			</div>
+			<div class="section_warpper advertising_wrapper"><img class="section_image advertising_image"
+					src="./common/img/8-advertising/s/advertising-2.png" alt="advertising-2">
+				<h3 class="advContentMarginR">Walk for Children</h3>
+				<p class="section_content advContentMarginR">-Sowers Action-</p>
+			</div>
+		</div>
 	</section>
-	
+
 	<section id="backdrop" class="backdrop section_box">
-	    <h2 class="heading">Backdrop</h2>
-        <div class="section_container backdrop_container">
-            <div class="section_warpper"><img class="section_image" src="common/img/9-backdrop/backdrop-1.png" alt="backdrop-1"></div>
-        </div>
-        <h3 class="backdropContentMargin">Kouhu Travel Guide</h3>
-        <p class="section_content">-Yunlin County Government-</p>
-        <div class="section_container">
-            <div class="section_warpper"><img class="section_image backdrop_image" src="common/img/9-backdrop/backdrop-2.png" alt="backdrop-2"></div>
-        </div>
-        <h3 >Rural Travel in Taiwan</h3>
-        <p class="section_content ">-Nantou Branch, the Soil and Water Conservation Bureau. <br>Council of Agriculture, Executive Yuan.-</p>
+		<h2 class="heading">Backdrop</h2>
+		<div class="section_container backdrop_container">
+			<div class="section_warpper"><img class="section_image" src="common/img/9-backdrop/backdrop-1.png"
+					alt="backdrop-1"></div>
+		</div>
+		<h3 class="backdropContentMargin">Kouhu Travel Guide</h3>
+		<p class="section_content">-Yunlin County Government-</p>
+		<div class="section_container">
+			<div class="section_warpper"><img class="section_image backdrop_image"
+					src="common/img/9-backdrop/backdrop-2.png" alt="backdrop-2"></div>
+		</div>
+		<h3>Rural Travel in Taiwan</h3>
+		<p class="section_content ">-Nantou Branch, the Soil and Water Conservation Bureau. <br>Council of Agriculture,
+			Executive Yuan.-</p>
 	</section>
-	
+
 	<section id="poster" class="poster section_box">
-	    <h2 class="heading">Poster</h2>
-        <div class="section_container poster_container">
-            <div class="section_warpper poster_warpper"><img class="section_image" src="common/img/10-poster/poster-1.png" alt="poster-1">
-            </div>
-            <div class="section_warpper poster_warpper"><img class="section_image" src="common/img/10-poster/poster-2.png" alt="poster-2"></div>
-        </div>
-        <h3 >Volunteer Service Information</h3>
-        <p class="section_content ">-Agency for Volunteer Service-</p>
+		<h2 class="heading">Poster</h2>
+		<div class="section_container poster_container">
+			<div class="section_warpper poster_warpper"><img class="section_image"
+					src="common/img/10-poster/poster-1.png" alt="poster-1">
+			</div>
+			<div class="section_warpper poster_warpper"><img class="section_image"
+					src="common/img/10-poster/poster-2.png" alt="poster-2"></div>
+		</div>
+		<h3>Volunteer Service Information</h3>
+		<p class="section_content ">-Agency for Volunteer Service-</p>
 	</section>
-	
+
 	<section id="banner" class="banner section_box">
-	    <h2 class="heading">Banner</h2>
-        <div class="section_container banner_container">
-            
-            <div class="slideshow">
-                <img src="common/img/11-banner/banner-1.jpg" alt="banner-1">
-                <img src="common/img/11-banner/banner-2.jpg" alt="banner-2">
-                <img src="common/img/11-banner/banner-3.jpg" alt="banner-3" >
-            </div>
-            <h3 >School Website Banner</h3>
-            <p class="section_content ">-Ching Kok Secondary School-</p>
-        </div>
+		<h2 class="heading">Banner</h2>
+		<div class="section_container banner_container">
+
+			<div class="slideshow">
+				<img src="common/img/11-banner/banner-1.jpg" alt="banner-1">
+				<img src="common/img/11-banner/banner-2.jpg" alt="banner-2">
+				<img src="common/img/11-banner/banner-3.jpg" alt="banner-3">
+			</div>
+			<h3>School Website Banner</h3>
+			<p class="section_content ">-Ching Kok Secondary School-</p>
+		</div>
 	</section>
-	
+
 	<section id="logo" class="logo section_box">
-	    <h2 class="heading">Logo</h2>
-        <div class="section_container logo_container ">
-            <div class="logo-warpper section_container">
-            <div class="section_warpper"><img class="logo_image section_image" src="./common/img/12-logo/logo-02.png" alt="logo-1"></div>
-            <div class="section_warpper"><img class="logo_image section_image" src="./common/img/12-logo/logo-03.png" alt="logo-2"></div>
-            <div class="section_warpper"><img class="logo_image section_image" src="./common/img/12-logo/logo-04.png" alt="logo-3"></div>
-            </div>
-            <div class="section_container">
-            <div class="section_warpper"><img class="logo_image section_image" src="./common/img/12-logo/logo-05.png" alt="logo-4"></div>
-            <div class="section_warpper"><img class="logo_image section_image" src="./common/img/12-logo/logo-06.png" alt="logo-5"></div>
-            <div class="section_warpper"><img class="logo_image section_image" src="./common/img/12-logo/logo-07.png" alt="logo-6"></div>
-            </div>
-        </div>
+		<h2 class="heading">Logo</h2>
+		<div class="section_container logo_container ">
+			<div class="logo-warpper section_container">
+				<div class="section_warpper"><img class="logo_image section_image"
+						src="./common/img/12-logo/logo-02.png" alt="logo-1"></div>
+				<div class="section_warpper"><img class="logo_image section_image"
+						src="./common/img/12-logo/logo-03.png" alt="logo-2"></div>
+				<div class="section_warpper"><img class="logo_image section_image"
+						src="./common/img/12-logo/logo-04.png" alt="logo-3"></div>
+			</div>
+			<div class="section_container">
+				<div class="section_warpper"><img class="logo_image section_image"
+						src="./common/img/12-logo/logo-05.png" alt="logo-4"></div>
+				<div class="section_warpper"><img class="logo_image section_image"
+						src="./common/img/12-logo/logo-06.png" alt="logo-5"></div>
+				<div class="section_warpper"><img class="logo_image section_image"
+						src="./common/img/12-logo/logo-07.png" alt="logo-6"></div>
+			</div>
+		</div>
 	</section>
-	
+
 	<footer><a>Copyright&#64;2019.Pandaa's personal page,all rights reserved</a></footer>
 
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </body>

@@ -34,8 +34,8 @@ body{
 	line-height:1.5;
 	text-align: center;
 	letter-spacing: 3px;
-	background: url("../img/bg_1483x834.png") fixed;
-    background-size: cover;
+	/* background: url("../img/bg_1483x834.png") fixed;
+    background-size: cover; */
 }
 
 /* 隱藏項目符號 */
@@ -101,7 +101,7 @@ a:hover img{
 }
 
 .heading,h2 ,h3 ,p ,tr ,th,td {
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .section_container{
@@ -334,7 +334,7 @@ a:hover img{
 
 /*--------------------section booklet---------------------*/
 
-.booklet{
+.booklet::after{
     background-image: url(../img/1-booklet/booklet_bg-1.png),url(../img/1-booklet/booklet_bg-2.png);
     background-repeat:no-repeat;
     background-position: 5% 10%,90% 85%;
@@ -627,3 +627,71 @@ footer{
     color: #907910;
     font-size: 11px;
 }
+
+/*------------------------parallax-----------------------*/
+
+
+.wrapper {
+    /* The height needs to be set to a fixed value for the effect to work.
+     * 100vh is the full height of the viewport. */
+    height: 100vh;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    overflow-y: auto;
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+  }
+  
+  .section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+  }
+  
+  .parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */ 
+    z-index: -1;
+  }
+  
+  /* The styling for the static div. */
+  .static {
+    background: red;
+  }
+
+
+
+  .ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.3em;
+  }
+  
+  .ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
