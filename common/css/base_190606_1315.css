@@ -630,8 +630,8 @@ footer{
 
 .ml6 {
     position: relative;
-    font-weight: 900;
-    font-size: 3.3em;
+    /* font-weight: 900;
+    font-size: 3.3em; */
   }
   
   .ml6 .text-wrapper {
