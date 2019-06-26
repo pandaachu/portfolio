@@ -1,76 +1,77 @@
 
 $(function () {
 
-  $(window).scroll(function () {
+    $(window).scroll(function () {
 
-      $('.heading,h2,h3,p,tr').each(function (i) {
+        $('.heading,h2,h3,p,tr').each(function (i) {
 
-          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-          var bottom_of_window = $(window).scrollTop() + $(window).height();
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-          if (bottom_of_window > bottom_of_object) {
+            if (bottom_of_window > bottom_of_object) {
 
-              $(this).animate({ 'opacity': '1' }, 2000);
+                $(this).animate({ 'opacity': '1' }, 2000);
 
-          }
+            }
 
-      });
+        });
 
-  });
+    });
 
-  
-  $('.slideshow').each(function () {
 
-      var $slides = $(this).find('img'), 
-          slideCount = $slides.length,   
-          currentIndex = 0;              
-   
-      $slides.eq(currentIndex).fadeIn();
+    $('.slideshow').each(function () {
 
-      setInterval(showNextSlide, 4500);
+        var $slides = $(this).find('img'),
+            slideCount = $slides.length,
+            currentIndex = 0;
 
-      function showNextSlide() {
+        $slides.eq(currentIndex).fadeIn();
 
-          var nextIndex = (currentIndex + 1) % slideCount;
+        setInterval(showNextSlide, 4500);
 
-          $slides.eq(currentIndex).fadeOut();
+        function showNextSlide() {
 
-          $slides.eq(nextIndex).fadeIn();
+            var nextIndex = (currentIndex + 1) % slideCount;
 
-          currentIndex = nextIndex;
-      }
+            $slides.eq(currentIndex).fadeOut();
 
-  });
+            $slides.eq(nextIndex).fadeIn();
 
-  
-  $('.ml6 .letters').each(function () {
-      $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-  });
+            currentIndex = nextIndex;
+        }
 
-  anime.timeline({ loop: true })
-      .add({
-          targets: '.ml6 .letter',
-          translateY: ["1.1em", 0],
-          translateZ: 0,
-          duration: 750,
-          delay: function (el, i) {
-              return 50 * i;
-          }
-      }).add({
-          targets: '.ml6',
-          opacity: 0,
-          duration: 1000,
-          easing: "easeOutExpo",
-          delay: 1000
-      });
-});
+    });
 
-// 點擊.gotop，就往上滑到網頁頂端
-$('.gotop a').click(function(event) {
-		   
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: 0
+
+    $('.ml6 .letters').each(function () {
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
+
+    anime.timeline({ loop: true })
+        .add({
+            targets: '.ml6 .letter',
+            translateY: ["1.1em", 0],
+            translateZ: 0,
+            duration: 750,
+            delay: function (el, i) {
+                return 50 * i;
+            }
+        }).add({
+            targets: '.ml6',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+
+    // 點擊.gotop，就往上滑到網頁頂端
+    $('.gotop a').click(function (event) {
+
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
         },
-        1000);
+            1000);
+    });
 });
+
